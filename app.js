@@ -21,8 +21,9 @@ function sortearAmigo() {
         alert('Debe agregar un amigo.')
         document.getElementById('amigo').focus();
     } else {
-        let numeroSorteado = Math.random()*listaDeAmigos.length;
-        document.getElementById('resultado').innerHTML = numeroSorteado;
-        console.log(Math.round(Math.random()*listaDeAmigos.length));
+        let numeroSorteado = Math.floor(Math.random()*listaDeAmigos.length);
+        document.getElementById('resultado').innerHTML = `El amigo secreto sorteado es: ${listaDeAmigos[numeroSorteado]}`;
+        document.getElementById('listaAmigos').innerHTML = '';
+        console.log(numeroSorteado);
     }
 }
